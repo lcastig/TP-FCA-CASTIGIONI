@@ -34,3 +34,8 @@ services:
     depends_on:
         db:
             condition: service_healthy
+  generatestats:
+    build: printStats/
+    depends_on:
+        db:
+            condition: service_healthy

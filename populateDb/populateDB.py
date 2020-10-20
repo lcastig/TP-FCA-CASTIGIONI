@@ -48,8 +48,6 @@ with open(sys.argv[1], 'r') as inputFile :
 
         matchInserts.append(f'INSERT INTO futbolStats.match (date, homeTeamId, awayTeamId, homeScore, awayScore, tournamentId, countryId) values (\'{date}\', {homeTeam},  {awayTeam}, {homeScore}, {awayScore}, {tournament}, {country})')
         
-    print(teamList)
-    print(tournamentList)
 inputFile.close()
 mydb = mysql.connector.connect( 
   host = "db", 
